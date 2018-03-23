@@ -1,0 +1,14 @@
+.chess-space {
+  padding: 15px;
+  font-size: 25px;
+  height: 34px;
+  width: 30px;
+}
+
+.chess-piece {
+  cursor: pointer;
+}
+
+.dark {
+  background-color: green;
+}

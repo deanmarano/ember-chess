@@ -2,6 +2,15 @@
 
 module.exports = function(environment) {
   let ENV = {
+    firebase: {
+      appName: 'deanchess-8827e',
+      apiKey: "AIzaSyApsrCTqFB2mlWVlLkchWphhMiRkRFQS6c",
+      authDomain: "deanchess-8827e.firebaseapp.com",
+      databaseURL: "https://deanchess-8827e.firebaseio.com",
+      projectId: "deanchess-8827e",
+      storageBucket: "",
+      messagingSenderId: "1083521373069"
+    },
     modulePrefix: 'ember-chess',
     environment,
     rootURL: '/',

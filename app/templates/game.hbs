@@ -1,0 +1,10 @@
+<h1>{{model.white.name}} versus {{model.black.name}}</h1>
+{{chess-board board=model}}
+<h3>Pieces</h3>
+<ul>
+  {{#each model.pieces as |piece|}}
+  <li>
+    {{piece.rank}} {{piece.file}} {{piece.color}} {{piece.name}}
+  </li>
+  {{/each}}
+</ul>

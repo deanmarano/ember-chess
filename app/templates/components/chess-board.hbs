@@ -1,0 +1,16 @@
+<table>
+  {{#each board.ranks as |rank|}}
+    <tr>
+      {{rank}}
+      {{#each board.files as |file|}}
+        {{chess-space rank=rank file=file board=board attemptMove=(action 'attemptMove')}}
+      {{/each}}
+    </tr>
+  {{/each}}
+  <tr>
+    <td></td>
+    {{#each board.files as |file|}}
+      <td>{{file}}</td>
+    {{/each}}
+  </tr>
+</table>
