@@ -32,6 +32,7 @@ export default Component.extend({
           rank: space.rank,
           file: space.file
         });
+        existingPiece.save();
       }
     }
   }

@@ -1,0 +1,16 @@
+<h1>Dean Chess</h1>
+Hi, {{player.name}}
+
+<h2>Players</h2>
+<ul>
+  {{#each model.players as |p|}}
+  <li>{{p.name}}</li>
+  {{/each}}
+</ul>
+
+<h2>Games</h2>
+<ul>
+  {{#each model.games as |g|}}
+  <li>{{#link-to 'game' g.id}}Game with {{g.id}}{{/link-to}}</li>
+  {{/each}}
+</ul>
