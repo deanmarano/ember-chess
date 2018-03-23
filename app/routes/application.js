@@ -11,7 +11,9 @@ export default Route.extend({
       player.save();
       return player;
     } else {
-      return this.store.query('player', {name: name, limit: 1});
+      return this.store.query('player', {name: name, limit: 1}).then(result => {
+        return result.get('firstObject');
+      });
     }
   }
 });

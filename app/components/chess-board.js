@@ -27,7 +27,9 @@ export default Component.extend({
     attemptMove(space, piece) {
       let board = this.get('board');
       let existingPiece = board.pieceAt(piece.rank, piece.file);
+      let pieceToTake = board.pieceAt(space.rank, space.file);
       if(this.validMove(board, existingPiece, space.rank, space.file)) {
+        if(pieceToTake) pieceToTake.destroyRecord();
         existingPiece.setProperties({
           rank: space.rank,
           file: space.file

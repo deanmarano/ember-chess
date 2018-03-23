@@ -4,13 +4,21 @@ Hi, {{player.name}}
 <h2>Players</h2>
 <ul>
   {{#each model.players as |p|}}
-  <li>{{p.name}}</li>
+  {{#if (not-eq p.id player.id)}}
+    <li>
+      {{p.name}}
+      <button {{action 'playGame' p 'black'}}>Play as Black</button>
+      <button {{action 'playGame' p 'white'}}>Play as White</button>
+    </li>
+  {{/if}}
   {{/each}}
 </ul>
 
 <h2>Games</h2>
 <ul>
   {{#each model.games as |g|}}
-  <li>{{#link-to 'game' g.id}}Game with {{g.id}}{{/link-to}}</li>
+  <li>{{#link-to 'game' g.id}}
+    {{g.white.name}} (White) vs. {{g.black.name}} (Black)
+    {{/link-to}}</li>
   {{/each}}
 </ul>
